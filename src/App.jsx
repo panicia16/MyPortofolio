@@ -6,7 +6,7 @@ function App() {
   return (
     <>
     <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
-      <div>
+      <div className="animate__animated animate__fadeInUp animate__delay-1s">
         {/* Quotes */}
         <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
           <img src={DataImage.HeroImage} alt="Hero Image" className="w-10 rounded-md" loading="lazy" />
@@ -33,12 +33,12 @@ function App() {
       </div>
 
       {/* Foto Profil */}
-      <img src={DataImage.HeroImage} alt="Hero Image" className="w-[500px] md:ml-auto" loading="lazy"/>
+      <img src={DataImage.HeroImage} alt="Hero Image" className="w-[500px] md:ml-auto animate__animated animate__fadeInUp animate__delay-2s" loading="lazy"/>
     </div>
 
     {/* Tentang */}
     <div className="tentang mt-32 py-10">
-      <div className="xl;w-2/3 lg:w-3/4 wf mx-auto p-7 bg-zinc-800 rounded-lg">
+      <div className="xl:w-2/3 lg:w-3/4 wf mx-auto p-7 bg-zinc-800 rounded-lg" data-aos="fade-up" data-aos-duration="1000">
         <p className="text-base/loose mb-10">
           Saya adalah mahasiswa Teknik Informatika Universitas Tarumanagara dengan konsentrasi Data Mining. 
           Saya memiliki ketertarikan pada analisis data, pengembangan web, serta pengujian perangkat lunak. 
@@ -55,7 +55,7 @@ function App() {
           <h1 className="font-large font-bold">PENDIDIKAN</h1>
 
           <div className="flex items-start gap-4">
-            <img src="public\assets\untar_logo.png" alt="logo untar"className="w-15 object-contain" loading="lazy"/>
+            <img src="\assets\untar_logo.png" alt="logo untar"className="w-15 object-contain" loading="lazy"/>
           <div className="">
             <p className="text-sm opacity-80">
               <span className="font-medium">Universitas Tarumanagara</span> - Teknik Informatika
@@ -70,7 +70,7 @@ function App() {
       {/* SKILL TEKNIKAL */}
       <div className="tools mt-32 px-4">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-12 text-center">Skill Teknikal</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8" data-aos="fade-up" data-aos-duration="3000">
           
           {/* PEMROGRAMAN DAN FRAMEWORK */}
           <div className="bg-zinc-800 p-6 rounded-xl">
@@ -153,11 +153,11 @@ function App() {
 
       {/* PROYEK*/}
       <div className="proyek mt-32 py-10">
-        <h1 className="text-center text-4xl font-bold mb-2">Proyek</h1>
-        <p className="text-base/loose text-center opacity-50">Berikut ini beberapa proyek yang telah saya buat.</p>
-        <div className="proyek-box mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 text-justify">
+        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="3000">Proyek</h1>
+        <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="300">Berikut ini beberapa proyek yang telah saya buat.</p>
+        <div className="proyek-box mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 text-justify" >
           {listProyek.map((proyek) => (
-            <div key={proyek.id} className="p-4 bg-zinc-800 rounded-md">
+            <div key={proyek.id} className="p-4 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="3000" data-aos-delay={proyek.dad}>
               <img src={proyek.gambar} alt="Proyek Image" loading="lazy"/>
               <div>
                 <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
@@ -183,9 +183,9 @@ function App() {
 
       {/* KONTAK */}
       <div className="kontak mt-32 sm:p-7 p-0">
-        <h1 className="text-4xl mb-2 font-bold text-center">Kontak</h1>
-        <p className="text-base/loose mb-10 opacity-50 text-center">Mari terhubung dengan saya</p>
-        <form action="https://formsubmit.co/panicia1604@gmail.com" method="POST" target="_blank" className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md" autoComplete="off">
+        <h1 className="text-4xl mb-2 font-bold text-center" data-aos="fade-up" data-aos-duration="3000">Kontak</h1>
+        <p className="text-base/loose mb-10 opacity-50 text-center"data-aos="fade-up" data-aos-duration="3000" data-aos-delay="300">Mari terhubung dengan saya</p>
+        <form action="https://formsubmit.co/panicia1604@gmail.com" method="POST" target="_blank" className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="500" autoComplete="off">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <label className="font-semibold"> Nama Lengkap</label>
