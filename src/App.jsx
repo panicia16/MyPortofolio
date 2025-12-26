@@ -22,11 +22,11 @@ function App() {
 
         {/* Button Download CV dan Lihat Proyek */}
         <div className="flex items-center sm:gap-4 gap-x-20">
-          <a href="#" className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-400">
-            Download CV <i className="ri-download-2-fill ri-lg text-center"></i>
+          <a href="https://drive.google.com/file/d/1BHdTYAAShmjlPk44Tva8s3WbiBoQi0VR/view?usp=drive_link" className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-400">
+            Lihat CV <i className="ri-arrow-right-up-line"></i>
           </a>
 
-          <a href="#" className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-400">
+          <a href="#proyek" className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-400">
             Lihat Proyek <i className="ri-arrow-down-fill ri-lg text-center"></i>
           </a>
         </div>
@@ -37,7 +37,7 @@ function App() {
     </div>
 
     {/* Tentang */}
-    <div className="tentang mt-32 py-10">
+    <div className="tentang mt-32 py-10" id="tentang">
       <div className="xl:w-2/3 lg:w-3/4 wf mx-auto p-7 bg-zinc-800 rounded-lg" data-aos="fade-up" data-aos-duration="1000">
         <p className="text-base/loose mb-10">
           Saya adalah mahasiswa Teknik Informatika Universitas Tarumanagara dengan konsentrasi Data Mining. 
@@ -152,7 +152,7 @@ function App() {
       </div>
 
       {/* PROYEK*/}
-      <div className="proyek mt-32 py-10">
+      <div className="proyek mt-32 py-10"id="proyek">
         <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="3000">Proyek</h1>
         <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="300">Berikut ini beberapa proyek yang telah saya buat.</p>
         <div className="proyek-box mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 text-justify" >
@@ -182,7 +182,7 @@ function App() {
       </div>
 
       {/* KONTAK */}
-      <div className="kontak mt-32 sm:p-7 p-0">
+      <div className="kontak mt-32 sm:p-7 p-0" id="kontak">
         <h1 className="text-4xl mb-2 font-bold text-center" data-aos="fade-up" data-aos-duration="3000">Kontak</h1>
         <p className="text-base/loose mb-10 opacity-50 text-center"data-aos="fade-up" data-aos-duration="3000" data-aos-delay="300">Mari terhubung dengan saya</p>
         <form action="https://formsubmit.co/panicia1604@gmail.com" method="POST" target="_blank" className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="500" autoComplete="off">
