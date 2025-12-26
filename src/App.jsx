@@ -1,5 +1,7 @@
 import DataImage from "./data";
+import { listProyek } from "./data";
 function App() {
+
 
   return (
     <>
@@ -7,7 +9,7 @@ function App() {
       <div>
         {/* Quotes */}
         <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
-          <img src={DataImage.HeroImage} alt="Hero Image" className="w-10 rounded-md" />
+          <img src={DataImage.HeroImage} alt="Hero Image" className="w-10 rounded-md" loading="lazy" />
           <q>Sedang berproses, terus belajar, dan tidak berhenti</q>
         </div>
 
@@ -15,8 +17,7 @@ function App() {
         <h1 className="text-5xl/tight font-bold mb-3">Hi, Saya Panicia</h1>
         <p className="text-base/loose mb-6 opacity-50 text-justify">
           Memiliki minat pada Data Analysis, Data Science, Data Engineer, Backend, Frontend,
-          FullStack Development, dan Quality Assurance, serta terus belajaruntuk meningkatkan
-          skill dan pengalaman.
+          FullStack Development, Quality Assurance, dan IT Infrastruktur.
         </p>
 
         {/* Button Download CV dan Lihat Proyek */}
@@ -32,7 +33,7 @@ function App() {
       </div>
 
       {/* Foto Profil */}
-      <img src={DataImage.HeroImage} alt="Hero Image" className="w-[500px] md:ml-auto" />
+      <img src={DataImage.HeroImage} alt="Hero Image" className="w-[500px] md:ml-auto" loading="lazy"/>
     </div>
 
     {/* Tentang */}
@@ -54,7 +55,7 @@ function App() {
           <h1 className="font-large font-bold">PENDIDIKAN</h1>
 
           <div className="flex items-start gap-4">
-            <img src="public\assets\untar_logo.png" alt="logo untar"className="w-15 object-contain"/>
+            <img src="public\assets\untar_logo.png" alt="logo untar"className="w-15 object-contain" loading="lazy"/>
           <div className="">
             <p className="text-sm opacity-80">
               <span className="font-medium">Universitas Tarumanagara</span> - Teknik Informatika
@@ -91,7 +92,7 @@ function App() {
                 ["reactjs.png", "ReactJS"],
               ].map(([img, name]) => (
               <div key={name} className="group flex flex-col items-center w-16 h-16">
-                <img src={`/assets/tools/programming_and_framework/${img}`} alt={name} className="w-12 sm:w-14 bg-white p-2 rounded-md transition-transform duration-300 group-hover:scale-110"/>
+                <img src={`/assets/tools/programming_and_framework/${img}`} alt={name} className="w-12 sm:w-14 bg-white p-2 rounded-md transition-transform duration-300 group-hover:scale-110" loading="lazy"/>
                 <span className="mt-2 inset-0 flex items-center justify-center text-[10px] font-semibold text-zinc-900 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-1 rounded-md z-30">{name}</span>
               </div>
               ))}
@@ -124,7 +125,7 @@ function App() {
                 ["xampp.png", "XAMPP"],
               ].map(([img, name]) => (
             <div key={name} className="group flex flex-col items-center w-16 h-16">
-              <img src={`/assets/tools/tools_and_software/${img}`} alt={name} className="w-12 sm:w-14 bg-white p-2 rounded-md transition-transform duration-300 group-hover:scale-110"/>
+              <img src={`/assets/tools/tools_and_software/${img}`} alt={name} className="w-12 sm:w-14 bg-white p-2 rounded-md transition-transform duration-300 group-hover:scale-110" loading="lazy"/>
               <span className="mt-2 inset-0 flex items-center justify-center text-[10px] font-semibold text-zinc-900 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-1 rounded-md z-30">{name}</span>
               </div>
               ))}
@@ -141,7 +142,7 @@ function App() {
                 ["postgreSQL.png", "PostgreSQL"],
               ].map(([img, name]) => (
             <div key={name} className="group flex flex-col items-center w-16 h-16">
-              <img src={`/assets/tools/database/${img}`} alt={name} className="w-12 sm:w-14 bg-white p-2 rounded-md transition-transform duration-300 group-hover:scale-110"/>
+              <img src={`/assets/tools/database/${img}`} alt={name} className="w-12 sm:w-14 bg-white p-2 rounded-md transition-transform duration-300 group-hover:scale-110" loading="lazy"/>
               <span className="mt-2 inset-0 flex items-center justify-center text-[10px] font-semibold text-zinc-900 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-1 rounded-md z-30">{name}</span>
             </div> 
               ))}
@@ -151,11 +152,32 @@ function App() {
       </div>
 
       {/* PROYEK*/}
-      <div className="proyek mt-32 px-4">
+      <div className="proyek mt-32 py-10">
         <h1 className="text-center text-4xl font-bold mb-2">Proyek</h1>
         <p className="text-base/loose text-center opacity-50">Berikut ini beberapa proyek yang telah saya buat.</p>
-        <div className="proyek-box">
-          
+        <div className="proyek-box mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 text-justify">
+          {listProyek.map((proyek) => (
+            <div key={proyek.id} className="p-4 bg-zinc-800 rounded-md">
+              <img src={proyek.gambar} alt="Proyek Image" loading="lazy"/>
+              <div>
+                <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
+                <p className="text-base/loose mb-4">{proyek.desk}</p>
+                <p className="text-xs mb-2 opacity-70">{proyek.date}</p>
+                <div className="flex flex-wrap gap-2">
+                  {proyek.tools.map((tool, index) => (
+                    <p className="py-1 px-3 border border-zinc-500 rounded-md font-semibold" key={index}>
+                      {tool}
+                    </p>
+                  ))}
+                </div>
+                <div className="mt-8 text-center">
+                  <a href={proyek.link} target="_blank" className="bg-violet-700 p-3 rounded-lg block border border-zinc-600 hover:bg-violet-400">
+                    Lihat Proyek
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 

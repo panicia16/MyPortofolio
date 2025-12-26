@@ -6,152 +6,61 @@ const Image = {
 
 export default Image;
 
-import Tools1 from "/assets/tools/tools_and_software/vscode.png";
-// import Tools2 from "/assets/tools/reactjs.png";
-// import Tools3 from "/assets/tools/nextjs.png";
-// import Tools4 from "/assets/tools/tailwind.png";
-// import Tools5 from "/assets/tools/bootstrap.png";
-// import Tools6 from "/assets/tools/js.png";
-// import Tools7 from "/assets/tools/nodejs.png";
-// import Tools8 from "/assets/tools/github.png";
-// import Tools9 from "/assets/tools/ai.png";
-// import Tools10 from "/assets/tools/canva.png";
-// import Tools11 from "/assets/tools/figma.png";
-
-export const listTools = [
-  {
-    id: 1,
-    gambar: Tools1,
-    nama: "Visual Studio Code",
-    ket: "Code Editor",
-    dad: "100",
-  },
-  // {
-  //   id: 2,
-  //   gambar: Tools2,
-  //   nama: "React JS",
-  //   ket: "Framework",
-  //   dad: "200",
-  // },
-  // {
-  //   id: 3,
-  //   gambar: Tools3,
-  //   nama: "Next JS",
-  //   ket: "Framework",
-  //   dad: "300",
-  // },
-  // {
-  //   id: 4,
-  //   gambar: Tools4,
-  //   nama: "Tailwind CSS",
-  //   ket: "Framework",
-  //   dad: "400",
-  // },
-  // {
-  //   id: 5,
-  //   gambar: Tools5,
-  //   nama: "Bootstrap",
-  //   ket: "Framework",
-  //   dad: "500",
-  // },
-  // {
-  //   id: 6,
-  //   gambar: Tools6,
-  //   nama: "Javascript",
-  //   ket: "Language",
-  //   dad: "600",
-  // },
-  // {
-  //   id: 7,
-  //   gambar: Tools7,
-  //   nama: "Node JS",
-  //   ket: "Javascript Runtime",
-  //   dad: "700",
-  // },
-  // {
-  //   id: 8,
-  //   gambar: Tools8,
-  //   nama: "Github",
-  //   ket: "Repository",
-  //   dad: "800",
-  // },
-  // {
-  //   id: 9,
-  //   gambar: Tools9,
-  //   nama: "Adobe Illustrator",
-  //   ket: "Design App",
-  //   dad: "900",
-  // },
-  // {
-  //   id: 10,
-  //   gambar: Tools10,
-  //   nama: "Canva",
-  //   ket: "Design App",
-  //   dad: "1000",
-  // },
-  // {
-  //   id: 11,
-  //   gambar: Tools11,
-  //   nama: "Figma",
-  //   ket: "Design App",
-  //   dad: "1100",
-  // },
-];
-
-import Proyek1 from "/assets/proyek/proyek1.webp";
-import Proyek2 from "/assets/proyek/proyek2.webp";
-import Proyek3 from "/assets/proyek/proyek3.webp";
-import Proyek4 from "/assets/proyek/proyek4.webp";
-import Proyek5 from "/assets/proyek/proyek5.webp";
-import Proyek6 from "/assets/proyek/proyek6.webp";
+import Proyek1 from "/assets/proyek/1.png";
+import Proyek2 from "/assets/proyek/2.png";
+import Proyek3 from "/assets/proyek/3.png";
+import Proyek4 from "/assets/proyek/4.png";
+import Proyek5 from "/assets/proyek/5.png";
 
 export const listProyek = [
   {
     id: 1,
     gambar: Proyek1,
-    nama: "Website Sekolah",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS"],
+    nama: "User Segmentation",
+    desk: "Cleaned the data and performed RFM segmentation in Google Colab using Python, summarized the results with a pivot table, and visualized unique customers per segment with a bar chart to support targeted retention and marketing.",
+    date: "November 2025",
+    tools: ["Python", "Google Colab", "Google Drive", "CSV"],
+    link: "https://github.com/panicia16/Data-Analysis/blob/main/User_Segmentation.ipynb",
     dad: "200",
   },
   {
     id: 2,
     gambar: Proyek2,
-    nama: "Company Profile",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS", "Swiper", "Lightbox Gallery"],
+    nama: "User Retention Analysis",
+    desk: "Performed RFM segmentation using Python (Pandas, NumPy, DateTime, Seaborn) in Google Colab to classify users by recency, frequency, and monetary value for more targeted retention and marketing strategies.",
+    date: "October 2025",
+    tools: ["Python", "Google Colab", "Google Drive", "CSV"],
+    link: "https://github.com/panicia16/Data-Analysis/blob/main/User_Retention_Analysis.ipynb",
     dad: "300",
   },
   {
     id: 3,
     gambar: Proyek3,
-    nama: "Web Pernikahan 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "TailwindCSS", "AOS"],
+    nama: "E-Commerce Website “Etreese”",
+    desk: "A web-based e-commerce platform developed using the SDLC methodology for UMKM Etreese. The project was carried out as a team. Before development, I designed the UI using Figma as the blueprint. I was responsible for developing the frontend and backend of the admin dashboard, which includes the orders, products, sales, and stock modules. After development, I also performed functional testing to ensure that all features worked properly and met user requirements.",
+    date: "February 2025 - June 2025",
+    tools: ["HTML5", "CSS3", "Bootstrap5", "Laravel", "Laragon", "Supabase (Database)", "Hostinger (Domain)", "Nusa.id (Hosting)", "Visual Studio Code", "Figma", "PostgreSQL"],
+    link: "https://github.com/melfanny/Etreese2",
     dad: "400",
   },
   {
     id: 4,
     gambar: Proyek4,
-    nama: "Website Course",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "Bootstrap", "AOS"],
+    nama: "Website Fashion “Pomefiore”",
+    desk: "Pomefiore is a fashion e-commerce website designed to help customers explore and purchase a variety of the latest women's fashion products. This project was developed collaboratively within a team, where each member contributed to different parts of the system. I was responsible for both frontend and backend development, particularly for the All Product, Product Detail, Contact Us, Cart, and Checkout pages. The development focused on creating a smooth shopping experience with a responsive and user-friendly design.",
+    date: "November 2024 - December 2024",
+    tools: ["HTML", "CSS", "AngularJS", "Bootstrap5", "MongoDB", "Visual Studio Code"],
+    link: "https://github.com/IreneCarlLewis/Simple-Fashion-Shop",
     dad: "500",
   },
   {
     id: 5,
     gambar: Proyek5,
-    nama: "Web Portfolio",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "Bootsrap"],
+    nama: "Website Life Style “Clean Bites”",
+    desk: "This project was developed collaboratively within a team. Each member had their own responsibilities to ensure the website was completed efficiently and with high quality. I contributed as the frontend developer for the News, Article, About Us, and Footer sections. Through this collaboration, we successfully built a responsive and well-structured lifestyle website.",
+    date: "September 2024 - October 2024",
+    tools: ["HTML", "CSS", "Javascript", "Visual Studioi Code"],
+    link: "https://github.com/melfanny/CleanBites",
     dad: "600",
-  },
-  {
-    id: 6,
-    gambar: Proyek6,
-    nama: "Company Profile 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["NextJS", "TailwindCSS", "Framermotion"],
-    dad: "700",
   },
 ];
