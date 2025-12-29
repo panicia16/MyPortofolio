@@ -22,7 +22,7 @@ function App() {
 
         {/* Button Download CV dan Lihat Proyek */}
         <div className="flex items-center sm:gap-4 gap-x-20">
-          <a href="https://drive.google.com/file/d/1BHdTYAAShmjlPk44Tva8s3WbiBoQi0VR/view?usp=drive_link" className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-400">
+          <a href="https://drive.google.com/file/d/138td20fK9dhYkBtZs7EH5JSLR4fhwHYw/view?usp=drive_link" className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-400">
             Lihat CV <i className="ri-arrow-right-up-line"></i>
           </a>
 
